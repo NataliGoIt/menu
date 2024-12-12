@@ -1,4 +1,38 @@
-.product .gradient {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* .product .gradient {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -8,30 +42,167 @@
     z-index: 1;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.32, 1);
     will-change: transform;
-}
+} */
 .video-container {
     position: relative;
     height: 100vh;
-    width: 100%;
-    overflow: hidden;
+    width: 100vw;
+    /* overflow: hidden; */
 }
 #background-video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1; /* Відправляємо відео назад */
+    width: 100vw;
+    background: linear-gradient(#0e0b0b25, #221818);
+    /* height: 100vh; */
+    /* width: auto;
+    height: auto; */
+    z-index: -1; 
+   
 }
-.cover-gradient {
+
+/* .cover-gradient {
     width: 100%;
-    height: 110px;
+    height: 110%;
     position: absolute;
     left: 0;
     bottom: 0;
     background: linear-gradient(#0e0b0b25, #221818);
     z-index: -1;
-}
+} */
+  @media screen and (min-width: 390px){
+    .container{
+      width: 360px;
+      margin: 0 auto;
+    }
+    .video-container{
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      background: linear-gradient(#0e0b0b25, #221818);
+    }
+    /* =================================HEADER===================================================== */
+    .header{
+      padding: 12px;
+    }
+    .header_list{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .header_item:not(:last-child){
+      margin-right: 12px;
+    }
+    .header_item-btn{
+      width: 32px;
+      height: 32px;
+      padding: auto;
+      border: none;
+      border-radius: 50%;
+    }
+    .header_item-btn-ikon{
+      width: 16px;
+      height: 16px;
+    }
+  /* =============================HERO====================================================== */
+  .hero{
+    padding-bottom: 16px;
+  }
+  .hero_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  }
+  .hero_img{
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+  }
+  .hero_title{
+    color: #ffffff;
+    font-size: 42px;
+    margin-bottom: 4px;
+  }
+  .hero_desk{
+    color: #ffffff;
+    font-size: 28px;
+  }
+  /* ===================search-input========================================================= */
+  #search-input{
+    width: 260px;
+    height: 38px;
+    border-radius: 8px;
+    margin-right: 5px;
+  }
+  .hero_search{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .hero_list{
+    display: flex;
+    align-items: center;
+  }
+  .hero_item:not(:last-child){
+margin-right: 6px;
+  }
+  .hero_item-btn{
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    border: none;
+    padding: auto;
+  }
+  .hero_item-btn-ikon{
+    width: 16px;
+    height: 16px;
+  }
+  /* =================================MENU=================================================== */
+  .menu{
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .menu_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+border-radius: 8px;
+
+background-color: #F3F1F2;
+  }
+  .menu_item{
+    text-align: center;
+    width: 100%;
+    padding-top: 8px;
+padding-bottom: 8px;
+cursor: pointer;
+  }
+  .menu_item-btn{
+    padding: none;
+    border: none;
+    background-color: transparent;
+  }
+  .menu_item-active{
+    background-color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  }
+
+  @media screen and (min-width: 768px){
+    .container{
+     width: 768px;
+    }
+  }
+
+  @media screen and (min-width: 1200px){
+    .container{
+    width: 1200px;
+    }
+  }

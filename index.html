@@ -7,38 +7,56 @@
     <title>Lunch-time</title>
 </head>
 <body>
-    <div class="video-container, cover-gradient">
+    <div class="video-container"> 
         <video autoplay muted loop id="background-video">
             <source src="./img/15815575-uhd_2160_3840_25fps.mp4" type="video/mp4">
             Ваш браузер не підтримує відео.
         </video>
-    <header>
-     <ul>
-        <img src="#" alt="foto">
-        <li><button>lang</button></li>
-        <li><button>deta</button></li>
+    <header class="header">
+     <ul class="header_list">
+        <li class="header_item"><button class="header_item-btn">
+            <svg class="header_item-btn-ikon">
+            <use href="./img/sprite.svg#romania"></use>
+             </svg></button></li>
+        <li class="header_item"><button class="header_item-btn">
+            <svg class="header_item-btn-ikon">
+            <use href="./img/sprite.svg#more"></use>
+             </svg></button></li>
      </ul>
     </header>
-    <div> 
-        <div>
-            <h1>Lunch-time</h1>
-            <p>Meniu</p>
+    <div class="hero"> 
+        <div class="hero_container">
+            <img src="./img/pizza.jpg" class="hero_img">
+            <h1 class="hero_title">Lunch-time</h1>
+            <p class="hero_desk">Meniu</p>
         </div>
-        <div>
+        <div class="hero_search container">
             <input type="text" id="search-input" placeholder="Cautâ">
+       
+        <ul class="hero_list">
+            <li class="hero_item"><button class="hero_item-btn">
+                <svg class="hero_item-btn-ikon">
+                <use href="./img/sprite.svg#romania"></use>
+                 </svg></button></li>
+            <li class="hero_item"><button class="hero_item-btn">
+                <svg class="hero_item-btn-ikon">
+                <use href="./img/sprite.svg#more"></use>
+                 </svg></button></li>
+         </ul>
         </div>
     </div> 
-    <div>
+</div>
+    <div class="menu container">
     <!-- список пунктів меню -->
-        <ul>
-            <li><button>Pizza</button></li>
-            <li><button>Burger</button></li>
-            <li><button>Băuturi</button></li>
+        <ul class="menu_list">
+            <li class="menu_item"><button class="menu_item-btn">Pizza</button></li>
+            <li class="menu_item menu_item-active"><button class="menu_item-btn">Burger</button></li>
+            <li class="menu_item"><button class="menu_item-btn">Băuturi</button></li>
         </ul>
     </div>
     <!-- список меню пица -->
-    <div>
-        <ul>
+    <div class="pizza">
+        <ul class="pizza_list">
             <!-- пункт меню в свернутом виде -->
             <li>
             <div>

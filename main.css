@@ -159,6 +159,8 @@ margin-right: 6px;
     padding: auto;
   }
   .hero_item-btn-ikon{
+  stroke: #221818;
+  fill: #221818;
     width: 16px;
     height: 16px;
   }
@@ -199,33 +201,61 @@ cursor: pointer;
 
   } */
   .pizza_item{
-   
+ padding-left: 8px;
     height: 103px;
     border-radius: 8px;
     border: 1px solid #E5E5EA;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url(./img/item.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+       &:not(:last-child){
+margin-bottom: 8px;
+}
   }
+
   .pizza_item-left{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height:  100%;
-    
+  align-items: flex-start;
+   
+  }
+  .pizza_item-title{
+    margin-bottom: 4px;
   }
   .pizza_item-desk{
     color: #A6A4B4;
+    margin-bottom: 16px;
   }
   .pizza_item-price-num{
     font-weight: bold;
+    
   }
   .pizza_item-img{
-    width: 207px;
+    width: 168px;
     height: 103px;
+
+  }
+  /* =======================================popup============================================ */
+  .item{
+    border-radius: 8px;
+    /* background-color: #221818; */
+    overflow: hidden;
+  }
+  .img-div{
+    width: 100%;
+    height: 174px;
+    background-color: #A6A4B4;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .desk-desk{
+    margin-bottom: 4px;
+    color: #221818;
+    font-weight: 300;
+  }
+  .desk-size{
+    margin-bottom: 8px;
+    color: #A6A4B4;
   }
   }
 

@@ -237,25 +237,61 @@ margin-bottom: 8px;
   }
   /* =======================================popup============================================ */
   .item{
+    box-shadow: 0 0px 40px #bfbdcb;
+    
     border-radius: 8px;
+    
     /* background-color: #221818; */
     overflow: hidden;
+  }
+  .desk-div{
+    padding: 12px;
   }
   .img-div{
     width: 100%;
     height: 174px;
     background-color: #A6A4B4;
     overflow: hidden;
-    margin-bottom: 4px;
+  }
+  .desk-title{
+    font-size: 17px;
+    font-weight: bold;
+margin-bottom: 8px;
   }
   .desk-desk{
-    margin-bottom: 4px;
+    font-size: 14px;
+    margin-bottom: 12px;
     color: #221818;
     font-weight: 300;
   }
   .desk-size{
-    margin-bottom: 8px;
+    font-size: 13px;
+    margin-bottom: 16px;
     color: #A6A4B4;
+  }
+  .size-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+  .size-item{
+    &:not(:last-child){
+      margin-right: 8px;
+    }
+  }
+  .active-size{
+    background-color: aqua;
+  }
+  .size-btn{
+    padding: 4px;
+    border: none;
+    border-radius: 50px;
+    /* background-color: inherit; */
+  }
+  .desk-price-num{
+    font-size: 17px;
+    font-weight: bold;
   }
   }
 

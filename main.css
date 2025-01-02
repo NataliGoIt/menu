@@ -85,6 +85,58 @@ a {
       background: linear-gradient(#0e0b0b25, #221818);
     }
     /* =================================HEADER===================================================== */
+    .language_selector {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    .language_btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white; 
+    }
+    
+    .language_dropdown {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px 0;
+      padding: 0;
+      list-style: none;
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 1000;
+    }
+    
+    .language_dropdown-item {
+      padding: 10px 20px;
+      cursor: pointer;
+      text-align: center;
+    
+    }
+    
+    .language_dropdown-item:hover,
+    .language_dropdown-item:focus{
+      background-color: #007bff;
+      color: white;
+    }
+    
+    .language_selector:hover .language_dropdown {
+      display: block;
+    }
+    
+    .flag-icon {
+      width: 16px;
+      height: 16px;
+    }
+    
+    
     .header{
       padding: 12px;
     }
@@ -92,16 +144,16 @@ a {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      column-gap: 12px;
     }
-    .header_item:not(:last-child){
-      margin-right: 12px;
-    }
+
     .header_item-btn{
       width: 32px;
       height: 32px;
-      padding: auto;
+      padding: 8px;
       border: none;
       border-radius: 50%;
+      cursor: pointer;
     }
     .header_item-btn-ikon{
       width: 16px;
@@ -156,7 +208,7 @@ margin-right: 6px;
     height: 32px;
     border-radius: 50px;
     border: none;
-    padding: auto;
+    padding: 4px;
   }
   .hero_item-btn-ikon{
   stroke: #221818;

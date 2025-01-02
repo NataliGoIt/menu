@@ -353,6 +353,34 @@ margin-bottom: 8px;
     font-size: 17px;
     font-weight: bold;
   }
+  /* ================modal-window============================== */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .modal-window{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    background-color: #A6A4B4;
+    padding: 12px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+  }
+  .modal-window_close{
+    display: block;
+    text-align: end;
+  }
+  /* .modal-window_container{
+
+  } */
   /* ===============================================map====================================== */
   .map{
     width: 100%;

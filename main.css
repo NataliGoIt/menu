@@ -377,10 +377,13 @@ margin-bottom: 8px;
   .modal-window_close{
     display: block;
     text-align: end;
+    cursor: pointer;
   }
-  /* .modal-window_container{
-
-  } */
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
   /* ===============================================map====================================== */
   .map{
     width: 100%;

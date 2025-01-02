@@ -210,11 +210,18 @@ margin-right: 6px;
     border: none;
     padding: 4px;
   }
+  /* .hero_item-link{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    border: none;
+    padding: 4px;
+    background-color:#464646 ;
+  } */
   .hero_item-btn-ikon{
-  stroke: #221818;
-  fill: #221818;
-    width: 16px;
-    height: 16px;
+    width: 22px;
+    height: 22px;
   }
   /* =================================MENU=================================================== */
   .menu{

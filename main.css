@@ -232,10 +232,11 @@ margin-right: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    row-gap: 12px;
 border-radius: 8px;
 
 background-color: #F3F1F2;
+margin-bottom: 16px;
   }
   .menu_item{
     text-align: center;

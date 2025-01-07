@@ -262,9 +262,6 @@ display: flex;
 flex-direction: column;
 gap: 10px;
   }
-  /* .pizza_item{
-    
-  } */
 .pizza_item-main{
   padding-left: 8px;
   height: 103px;
@@ -300,10 +297,21 @@ gap: 10px;
   .pizza_item-main.hide{
     display: none;
   }
-  .item_details.is-visible{
+
+  .item_details {
+    display: none;
+  }
+  /* .item_details.is-visible{
     display: block;
     /* visibility: hidden; */
+  } */
+  .item_details.is-visible {
+    display: none;
   }
+  .item_details:not(.is-visible) {
+    display: block;
+  }
+  
   .item_details{
     display: none;
     box-shadow: 0 0px 40px #bfbdcb;
@@ -396,7 +404,7 @@ margin-bottom: 8px;
     width: 100%;
     height: 300px;
   }
-  }
+  
 
   @media screen and (min-width: 768px){
     .container{

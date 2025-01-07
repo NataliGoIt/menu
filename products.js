@@ -5,9 +5,9 @@ export const pizza = [
       title: "PIZZA CEZAR",
       description: "Aluat, sos, mozzarella, cascaval, pui, becon, verdeturi, porumb, cherry rosi, permezan",
       sizes: [
-        { size: "32cm - 710gr", price: "35 lei", title: "Standart"},
-        { size: "32cm - 980gr", price: "50 lei", title: "Hrănitoare" },
-        { size: "40cm - 1440gr", price: "65 lei", title: "Mare" }
+        { size: "32cm", grams:"710gr", price: "35 lei", title: "S"},
+        { size: "32cm", grams:"980gr", price: "50 lei", title: "M" },
+        { size: "40cm", grams:"1440gr", price: "65 lei", title: "L" }
       ],
       price: 19.99,
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
@@ -17,9 +17,9 @@ export const pizza = [
       title: "PIZZA CU LEGUME",
       description: "Aluat, sos, mozzarella, cascaval, roși, ardei, verdeturi, dor blu, ciuperci",
       sizes: [
-        { size: "32cm - 710gr", price: "30 lei", title: "Standart"},
-        { size: "32cm - 860gr", price: "40 lei", title: "Hrănitoare" },
-        { size: "40cm - 1270gr", price: "55 lei", title: "Mare" }
+        { size: "32cm", grams:"710gr", price: "30 lei", title: "Standart"},
+        { size: "32cm", grams:"860gr", price: "40 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1270gr", price: "55 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },
@@ -28,9 +28,9 @@ export const pizza = [
       title: "PIZZA DIABLO",
       description: "Aluat, sos, mozzarella, chorizo, prosciutto, parmezan, ardei verde, ardei iute",
       sizes: [
-        { size: "32cm - 650gr", price: "35 lei", title: "Standart"},
-        { size: "32cm - 890gr", price: "45 lei", title: "Hrănitoare" },
-        { size: "40cm - 1220gr", price: "60 lei", title: "Mare" }
+        { size: "32cm", grams:"650gr", price: "35 lei", title: "Standart"},
+        { size: "32cm", grams:"890gr", price: "45 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1220gr", price: "60 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },
@@ -39,9 +39,9 @@ export const pizza = [
       title: "PIZZA MARGHERITA",
       description: "Aluat, sos, mozzarella, roși, tomato pelati, busuios",
       sizes: [
-        { size: "32cm - 750gr", price: "30 lei", title: "Standart"},
-        { size: "32cm - 1020gr", price: "43 lei", title: "Hrănitoare" },
-        { size: "40cm - 1310gr", price: "60 lei", title: "Mare" }
+        { size: "32cm", grams:"750gr", price: "30 lei", title: "Standart"},
+        { size: "32cm", grams:"1020gr", price: "43 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1310gr", price: "60 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },
@@ -50,9 +50,9 @@ export const pizza = [
       title: "PIZZA PEPPERONI",
       description: "Aluat, sos, tomato pelati, oregano, mozzarella, chorizo, cascaval, ardei iute",
       sizes: [
-        { size: "32cm - 770gr", price: "35 lei", title: "Standart"},
-        { size: "32cm - 1020gr", price: "45 lei", title: "Hrănitoare" },
-        { size: "40cm - 1340gr", price: "60 lei", title: "Mare" }
+        { size: "32cm", grams:"770gr", price: "35 lei", title: "Standart"},
+        { size: "32cm", grams:"1020gr", price: "45 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1340gr", price: "60 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },
@@ -61,9 +61,9 @@ export const pizza = [
       title: "PIZZA CU PUI ȘI ANANAS",
       description: "Aluat, sos, mozzarella, cascaval, pui, becon, ananas, porumb, parmezan",
       sizes: [
-        { size: "32cm - 760gr", price: "35 lei", title: "Standart"},
-        { size: "32cm - 1080gr", price: "45 lei", title: "Hrănitoare" },
-        { size: "40cm - 1390gr", price: "65 lei", title: "Mare" }
+        { size: "32cm", grams:"760gr", price: "35 lei", title: "Standart"},
+        { size: "32cm", grams:"1080gr", price: "45 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1390gr", price: "65 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },
@@ -72,9 +72,9 @@ export const pizza = [
       title: "PIZZA QUATTRO FORMAGGI",
       description: "Aluat, mozzarella, cascaval, parmezan, „dor blue”, sos",
       sizes: [
-        { size: "32cm - 640gr", price: "35 lei", title: "Standart"},
-        { size: "32cm - 860gr", price: "45 lei", title: "Hrănitoare" },
-        { size: "40cm - 1260gr", price: "65 lei", title: "Mare" }
+        { size: "32cm", grams:"640gr", price: "35 lei", title: "Standart"},
+        { size: "32cm", grams:"860gr", price: "45 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1260gr", price: "65 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },
@@ -83,9 +83,9 @@ export const pizza = [
       title: "PIZZA CU ȘUNCA",
       description: "Aluat, șunca, ardei dulce, brănză, sos",
       sizes: [
-        { size: "32cm - 650gr", price: "30 lei", title: "Standart"},
-        { size: "32cm - 980gr", price: "43 lei", title: "Hrănitoare" },
-        { size: "40cm - 1450gr", price: "60 lei", title: "Mare" }
+        { size: "32cm", grams:"650gr", price: "30 lei", title: "Standart"},
+        { size: "32cm", grams:"980gr", price: "43 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1450gr", price: "60 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },
@@ -94,9 +94,9 @@ export const pizza = [
       title: "PIZZA BAVAREZA",
       description: "Aluat, salami, cărnati, mozzarella, parmezan, roși, ciuperci, măsline, sos",
       sizes: [
-        { size: "32cm - 730gr", price: "35 lei", title: "Standart"},
-        { size: "32cm - 1040gr", price: "50 lei", title: "Hrănitoare" },
-        { size: "40cm - 1610gr", price: "65 lei", title: "Mare" }
+        { size: "32cm", grams:"730gr", price: "35 lei", title: "Standart"},
+        { size: "32cm", grams:"1040gr", price: "50 lei", title: "Hrănitoare" },
+        { size: "40cm", grams:"1610gr", price: "65 lei", title: "Mare" }
       ],
       image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
     },

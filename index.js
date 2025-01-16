@@ -6,6 +6,7 @@ const closeModalBtn = document.querySelector('.modal-window_close');
 const backdrop = document.querySelector('.backdrop');
 const modal = document.querySelector('.modal-window');
 const pizzaItems = document.querySelectorAll('.pizza_item');
+
   
     openModalBtn.addEventListener('click', toggleModal);
     closeModalBtn.addEventListener('click', toggleModal);
@@ -58,8 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //   });
 // });
 import { pizza } from './products.js'; // Імпортуйте ваш масив піц
+import { drinks } from './products.js'
 console.log(pizza)
+console.log(drinks)
 const pizzaList = document.getElementById('pizzaList');
+const drinksList = document.getElementById('drinksList')
 
 // Функція для створення розмітки пункту меню
 function createPizzaItem(pizza) {
@@ -88,30 +92,57 @@ function createPizzaItem(pizza) {
             <ul class="item_details-size-list">
               ${pizza.sizes
                 .map(
-                  (size, index) => `
+                  (size) => `
+                  <div class="item_details-size-block">
                 <li class="item_details-size-item">
-                  <button class="item_details-size-btn ${index === 0 ? 'active-size' : ''}">
-                    ${size.title} (${size.size})
+                  <button class="item_details-size-btn">
+                    ${size.title}
                   </button>
+                  
                 </li>
+                <p class="item_details-desk-price">${size.size}</p>
+                <p class="item_details-desk-price">${size.grams}</p>
+                <p class="item_details-desk-price">${size.price}</p>
+                </div>
               `
                 )
                 .join('')}
             </ul>
           </div>
-          <p class="item_details-desk-price">${pizza.sizes[0].grams}</p>
-          <p class="item_details-desk-price">${pizza.sizes[0].price}</p>
+          
         </div>
       </div>
     </li>
   `;
 }
 
+function createDrinksItem(drinks) {
+  return `
+    <li class="pizza_item">
+      <div class="pizza_item-main">
+        <div class="pizza_item-left">
+          <div>
+            <h2 class="pizza_item-title">${drinks.title}</h2>
+            <p class="pizza_item-desk">${drinks.size}</p>
+          </div>
+          <p class="pizza_item-price"><span class="pizza_item-price-num">${drinks.price}</span></p>
+        </div>
+        <div class="pizza_item-right">
+          <img src="${drinks.image}" alt="${drinks.title}" class="pizza_item-img">
+        </div>
+      </div>
+    </li>
+  `;
+}
+
+// ${index === 0 ? 'active-size' : ''}
 // Генерація списку
 pizza.forEach((pizzaItem) => {
   pizzaList.innerHTML += createPizzaItem(pizzaItem);
 });
-
+drinks.forEach((drinksItem) => {
+  drinksList.innerHTML += createDrinksItem(drinksItem);
+});
 // Додаємо функціонал розгортання пункту меню
 pizzaList.addEventListener('click', (event) => {
   

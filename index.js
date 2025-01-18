@@ -69,6 +69,7 @@ const drinksList = document.getElementById('drinksList')
 function createPizzaItem(pizza) {
   return `
     <li class="pizza_item">
+    <div class="trans">
       <div class="pizza_item-main">
         <div class="pizza_item-left">
           <div>
@@ -111,6 +112,7 @@ function createPizzaItem(pizza) {
           </div>
           
         </div>
+      </div>
       </div>
     </li>
   `;

@@ -68,7 +68,7 @@ a {
 }
 .main_container{
   position: relative;
-  z-index: 1;
+  z-index: 10;
   
 }
 .video-container::before {
@@ -252,6 +252,7 @@ margin-bottom: 16px;
     padding-top: 8px;
 padding-bottom: 8px;
 cursor: pointer;
+
   }
   .menu_item-btn{
     padding: none;
@@ -270,6 +271,14 @@ display: flex;
 flex-direction: column;
 gap: 10px;
   }
+  .pizza_item{
+    transition: all 2s cubic-bezier(0.25, 1, 0.32, 1);
+  }
+  /* .trans{
+    will-change: transform;
+    transition: height 0.5s cubic-bezier(0.25, 1, 0.32, 1), opacity 0.25s ease-out;
+
+  } */
 .pizza_item-main{
   padding-left: 8px;
   height: 103px;
@@ -278,6 +287,8 @@ gap: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* will-change: transform;
+    transition: height 0.5s cubic-bezier(0.25, 1, 0.32, 1), opacity 0.25s ease-out; */
 }
   .pizza_item-left{
     display: flex;
@@ -318,6 +329,9 @@ gap: 10px;
   }
   .item_details:not(.is-visible) {
     display: block;
+    will-change: transform;
+    transition: height 0.5s cubic-bezier(0.25, 1, 0.32, 1), opacity 0.25s ease-out;
+
   }
   
   .item_details{
@@ -325,7 +339,7 @@ gap: 10px;
     box-shadow: 0 0px 40px #bfbdcb;
     
     border-radius: 8px;
-    
+ 
     /* background-color: #221818; */
     overflow: hidden;
   }
@@ -400,6 +414,7 @@ margin-bottom: 8px;
     border-radius: 8px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     overflow: auto;
+    z-index: 20;
   }
   .modal-window_close{
     /* display: flex;  */

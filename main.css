@@ -143,6 +143,9 @@ a {
     
     .header{
       padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .header_list{
       display: flex;
@@ -165,7 +168,7 @@ a {
     }
   /* =============================HERO====================================================== */
   .hero{
-    padding-top: 100px;
+    padding-top: 24px;
     padding-bottom: 16px;
   }
   .hero_container{

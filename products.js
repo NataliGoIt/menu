@@ -171,18 +171,12 @@ export const pizza = [
   // export const otherProducts = [
   //   {
   //     id: 1,
-  //     title: "",
+  //     title: "Burger 'King'",
   //     description: "",
   //     price: 12,
   //   },
   //   {
   //     id: 2,
-  //     title: "",
-  //     description: "",
-  //     price: 12,
-  //   },
-  //   {
-  //     id: 3,
   //     title: "",
   //     description: "",
   //     price: 12,

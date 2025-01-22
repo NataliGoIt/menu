@@ -7,6 +7,7 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 ul,
@@ -62,8 +63,8 @@ a {
   /* background-image: url(./img/back.png); */
 }
 #background-video {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover; 
 }
 .main_container{
@@ -237,6 +238,7 @@ margin-right: 6px;
     padding-bottom: 16px;
   }
   .menu_list{
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,7 +262,7 @@ cursor: pointer;
     background-color: transparent;
   }
   .menu_item-active{
-    background-color: #ffffff;
+    background-color: #c72323;
     font-weight: bold;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -272,12 +274,11 @@ flex-direction: column;
 gap: 10px;
   }
   .pizza_item{
-    transition: all 2s cubic-bezier(0.25, 1, 0.32, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   /* .trans{
+    transition: transform 0.2s cubic-bezier(0.25, 1, 0.32, 1);
     will-change: transform;
-    transition: height 0.5s cubic-bezier(0.25, 1, 0.32, 1), opacity 0.25s ease-out;
-
   } */
 .pizza_item-main{
   padding-left: 8px;
@@ -287,8 +288,7 @@ gap: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* will-change: transform;
-    transition: height 0.5s cubic-bezier(0.25, 1, 0.32, 1), opacity 0.25s ease-out; */
+
 }
   .pizza_item-left{
     display: flex;
@@ -319,6 +319,8 @@ gap: 10px;
 
   .item_details {
     display: none;
+
+
   }
   /* .item_details.is-visible{
     display: block;
@@ -326,11 +328,11 @@ gap: 10px;
   } */
   .item_details.is-visible {
     display: none;
+ 
   }
   .item_details:not(.is-visible) {
     display: block;
-    will-change: transform;
-    transition: height 0.5s cubic-bezier(0.25, 1, 0.32, 1), opacity 0.25s ease-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   }
   
@@ -425,6 +427,38 @@ margin-bottom: 8px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+  }
+  .modal_delivery{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 12;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .modal_delivery-window{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    background-color: #A6A4B4;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    z-index: 20;
+  }
+  .modal-open{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .modal_delivery-window_close{
+    text-align: end;
+    cursor: pointer;
   }
   /* ===============================================map====================================== */
   .map{

@@ -1,19 +1,36 @@
-const languageBtn = document.querySelector(".language_btn");
-const languageDropdown = document.querySelector(".language_dropdown");
-const selector = document.querySelector('.language_selector');
-const openModalBtn = document.querySelector('.modal-window_open');
-const closeModalBtn = document.querySelector('.modal-window_close');
-const backdrop = document.querySelector('.backdrop');
-const modal = document.querySelector('.modal-window');
-const pizzaItems = document.querySelectorAll('.pizza_item');
+import { pizza, drinks } from './products.js'; 
 
+const languageBtn = document.querySelector(".language_btn"),
+ languageDropdown = document.querySelector(".language_dropdown"),
+ selector = document.querySelector('.language_selector'),
+ openModalBtn = document.querySelector('.modal-window_open'),
+ closeModalBtn = document.querySelector('.modal-window_close'),
+ backdrop = document.querySelector('.backdrop'),
+ modal = document.querySelector('.modal-window'),
+ modalDelivery = document.querySelector('.modal_delivery-window'),
+ openModalDelivery = document.querySelector('.delivery_btn'),
+ backdropDelivery = document.querySelector('.modal_delivery'),
+ closeDeliveryBtn = document.querySelector('.modal_delivery-window_close'),
+ pizzaItems = document.querySelectorAll('.pizza_item'),
+ burgerList = document.getElementById("burgerList");
+
+console.log(pizza)
+console.log(drinks)
+const pizzaList = document.getElementById('pizzaList');
+const drinksList = document.getElementById('drinksList')
   
     openModalBtn.addEventListener('click', toggleModal);
     closeModalBtn.addEventListener('click', toggleModal);
     backdrop.addEventListener('click',(event) => (!modal.contains(event.target) && toggleModal()));
    
+    openModalDelivery.addEventListener('click', toggleModalDelivery);
+    closeDeliveryBtn.addEventListener('click', toggleModalDelivery);
+    backdropDelivery.addEventListener('click',(event) => (!modalDelivery.contains(event.target) && toggleModalDelivery()))
   function toggleModal() {
     backdrop.classList.toggle('is-hidden');
+  }
+  function toggleModalDelivery(){
+    backdropDelivery.classList.toggle("modal-open")
   }
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -39,31 +56,50 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
+// Отримуємо кнопки та секції
+const buttons = {
+  pizza: document.getElementById('pizza-btn'),
+  burger: document.getElementById('burger-btn'),
+  drinks: document.getElementById('drinks-btn'),
+};
+const sections = {
+  pizza: document.getElementById('pizza'),
+  burger: document.getElementById('burger'),
+  drinks: document.getElementById('drinks'),
+};
+
+// Функція для перевірки видимої секції
+function updateActiveButton() {
+  let activeSection = null;
+
+  Object.keys(sections).forEach((key) => {
+    const section = sections[key];
+    const rect = section.getBoundingClientRect();
+    if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+      activeSection = key;
+    }
+  });
+
+  // Оновлюємо класи кнопок
+  Object.keys(buttons).forEach((key) => {
+    if (key === activeSection) {
+      buttons[key].classList.add('menu_item-active');
+    } else {
+      buttons[key].classList.remove('menu_item-active');
+    }
+  });
+}
+updateActiveButton();
+window.addEventListener('scroll', updateActiveButton);
 
 
-// pizzaItems.forEach((item) => {
-  
-//   item.addEventListener('click', () => {
-//     const details = item.querySelector('.item_details');
-//     const isVisible = details.classList.contains('is-visible');
 
-//     pizzaItems.forEach((otherItem) => {
-//       otherItem.querySelector('.pizza_item-main').classList.remove('hide');
-//       otherItem.querySelector('.item_details').classList.remove('is-visible');
-//     });
+// Ініціалізація при завантаженні
 
-//     if (!isVisible) {
-//       item.querySelector('.pizza_item-main').classList.add('hide');
-//       details.classList.add('is-visible');
-//     }
-//   });
-// });
-import { pizza } from './products.js'; // Імпортуйте ваш масив піц
-import { drinks } from './products.js'
-console.log(pizza)
-console.log(drinks)
-const pizzaList = document.getElementById('pizzaList');
-const drinksList = document.getElementById('drinksList')
+
+
+
+
 
 // Функція для створення розмітки пункту меню
 function createPizzaItem(pizza) {

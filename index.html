@@ -42,12 +42,11 @@
             <input type="text" id="search-input" placeholder="Cautâ">
        
         <ul class="hero_list">
-            
             <li class="hero_item">
-                <a class="hero_item-link"><button class="hero_item-btn modal-window_open">
-                <img src="./img/phone.svg" alt="" class="hero_item-btn-ikon"></a></button></li>
-            <li class="hero_item"><button class="hero_item-btn"><a class="hero_item-link" href="https://food.bolt.eu/uk-UA/297-cluj-napoca/p/118084-lunch-time">
-                <img src="./img/delivery.svg" alt=""></a></button></li>
+            <button class="hero_item-btn modal-window_open">
+            <img src="./img/phone.svg" alt="" class="hero_item-btn-ikon"></button></li>
+            <li class="hero_item"><button class="hero_item-btn delivery_btn">
+            <img src="./img/delivery.svg" alt=""></button></li>
          </ul>
         </div>
     </div> 
@@ -55,20 +54,20 @@
     <section class="menu">
     <!-- список пунктів меню -->
         <ul class="menu_list">
-            <li class="menu_item"><button class="menu_item-btn">Pizza</button></li>
-            <li class="menu_item menu_item-active"><button class="menu_item-btn">Burger</button></li>
-            <li class="menu_item"><button class="menu_item-btn">Băuturi</button></li>
+            <li class="menu_item"><a href="#pizza" class="menu_item-btn menu_item-active" id="pizza-btn">Pizza</a></li>
+            <li class="menu_item"><a href="#burger" class="menu_item-btn" id="burger-btn">Burger</a></li>
+            <li class="menu_item"><a href="#drinks" class="menu_item-btn" id="drinks-btn">Băuturi</a></li>
         </ul>
     <!-- список меню пица -->
-    <div class="pizza">
+    <div class="pizza" id="pizza">
         <ul class="pizza_list" id="pizzaList">
         </ul>
     </div>
-    <div class="burger">
+    <div class="burger" id="burger">
         <ul class="burger" id="burgerList">
         </ul>
     </div>
-    <div class="drinks">
+    <div class="drinks" id="drinks">
         <ul class="drinks_list" id="drinksList"></ul>
     </div>
     </section>
@@ -110,6 +109,18 @@
     </div>
 </div>
 </div>
+<div class="modal_delivery modal-open">
+    <div class="modal_delivery-window">
+        <div class="modal_delivery-window_close">X</div>
+        <div class="modal_delivery-window_container">
+          <ul class="modal_delivery-list">
+            <li class="modal_delivery-item"><a href="https://food.bolt.eu/en-US/297-cluj-napoca/p/118084-lunch-time/?utm_source=google_integration" target="_blank" rel="noopener noreferrer" class="modal_delivery-link">Bolt</li>
+            <li class="modal_delivery-item"><a href="https://glovoapp.com/ro/ro/cluj-napoca/lunch-time-clj-1/?content=meniu-c.2661446257&section=pizza-standard-o-32cm-s.5645912575" target="_blank" rel="noopener noreferrer" class="modal_delivery-link">Glovo</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
+</div>
 <script type="module" src="./index.js"></script></body>
 </html>

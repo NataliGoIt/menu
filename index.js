@@ -56,6 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
+
+
+// Функція для перевірки видимої секції
 // Отримуємо кнопки та секції
 const buttons = {
   pizza: document.getElementById('pizza-btn'),
@@ -68,14 +71,16 @@ const sections = {
   drinks: document.getElementById('drinks'),
 };
 
-// Функція для перевірки видимої секції
+// Функція для визначення активної секції
 function updateActiveButton() {
   let activeSection = null;
 
   Object.keys(sections).forEach((key) => {
     const section = sections[key];
     const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+
+    // Якщо секція в середині екрану, вона активна
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
       activeSection = key;
     }
   });
@@ -89,8 +94,36 @@ function updateActiveButton() {
     }
   });
 }
-updateActiveButton();
+
+
+// Відстеження скролу для оновлення активної кнопки
 window.addEventListener('scroll', updateActiveButton);
+
+// Ініціалізація
+updateActiveButton();
+
+// function updateActiveButton() {
+//   let activeSection = null;
+
+//   Object.keys(sections).forEach((key) => {
+//     const section = sections[key];
+//     const rect = section.getBoundingClientRect();
+//     if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+//       activeSection = key;
+//     }
+//   });
+
+//   // Оновлюємо класи кнопок
+//   Object.keys(buttons).forEach((key) => {
+//     if (key === activeSection) {
+//       buttons[key].classList.add('menu_item-active');
+//     } else {
+//       buttons[key].classList.remove('menu_item-active');
+//     }
+//   });
+// }
+// updateActiveButton();
+// window.addEventListener('scroll', updateActiveButton);
 
 
 

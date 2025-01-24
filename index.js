@@ -12,8 +12,9 @@ const languageBtn = document.querySelector(".language_btn"),
  backdropDelivery = document.querySelector('.modal_delivery'),
  closeDeliveryBtn = document.querySelector('.modal_delivery-window_close'),
  pizzaItems = document.querySelectorAll('.pizza_item'),
- burgerList = document.getElementById("burgerList");
+ burgerList = document.getElementById("burgerList"),
 
+ searchInput = document.getElementById("search-input");
 console.log(pizza)
 console.log(drinks)
 const pizzaList = document.getElementById('pizzaList');
@@ -23,8 +24,8 @@ const drinksList = document.getElementById('drinksList')
     closeModalBtn.addEventListener('click', toggleModal);
     backdrop.addEventListener('click',(event) => (!modal.contains(event.target) && toggleModal()));
    
-    openModalDelivery.addEventListener('click', toggleModalDelivery);
-    closeDeliveryBtn.addEventListener('click', toggleModalDelivery);
+    openModalDelivery.addEventListener('click', toggleModalDelivery());
+    closeDeliveryBtn.addEventListener('click', toggleModalDelivery());
     backdropDelivery.addEventListener('click',(event) => (!modalDelivery.contains(event.target) && toggleModalDelivery()))
   function toggleModal() {
     backdrop.classList.toggle('is-hidden');
@@ -32,29 +33,35 @@ const drinksList = document.getElementById('drinksList')
   function toggleModalDelivery(){
     backdropDelivery.classList.toggle("modal-open")
   }
-document.addEventListener("DOMContentLoaded", () => {
-  
-    languageDropdown.addEventListener("click", (event) => {
-      if (event.target.tagName === "LI") {
-        const selectedLang = event.target.dataset.lang;
-        const selectedFlag = event.target.dataset.flag;
-        const selectedText = event.target.textContent;
-  
+// document.addEventListener("DOMContentLoaded", () => {
+  languageBtn.addEventListener('click', (e)=>{
+    toggleModalLang()
+    
+    // languageDropdown.contains(e.target) && toggleModalLang()
+    // languageDropdown.classList.add("language_dropdown-active")
+  })
+  function toggleModalLang(){
+    languageDropdown.classList.toggle("language_dropdown-active")
+  }
+  document.addEventListener("click", (e) => {
+if (languageDropdown.classList.contains("language_dropdown-active")) {
+      if (e.target.tagName === "LI") {
+        const selectedLang = e.target.dataset.lang;
+        const selectedFlag = e.target.dataset.flag;
+        const selectedText = e.target.textContent;
+        console.log(selectedLang);
         languageBtn.innerHTML = `
           <img src="${selectedFlag}" alt="${selectedText}" class="flag-icon" />
         `;
+      }
+    }
+    // toggleModalLang()
+  });
+
+  // });
   
-        if (selector.contains(event.target)) {
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-          } else {
-            dropdown.style.display = 'none';
-          }
         // Логіка для оновлення мови сайту (наприклад, зміна URL)
         // console.log(`Selected language: ${selectedLang}`);
-      }
-    });
-  });
-  
 
 
 
@@ -102,32 +109,7 @@ window.addEventListener('scroll', updateActiveButton);
 // Ініціалізація
 updateActiveButton();
 
-// function updateActiveButton() {
-//   let activeSection = null;
 
-//   Object.keys(sections).forEach((key) => {
-//     const section = sections[key];
-//     const rect = section.getBoundingClientRect();
-//     if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-//       activeSection = key;
-//     }
-//   });
-
-//   // Оновлюємо класи кнопок
-//   Object.keys(buttons).forEach((key) => {
-//     if (key === activeSection) {
-//       buttons[key].classList.add('menu_item-active');
-//     } else {
-//       buttons[key].classList.remove('menu_item-active');
-//     }
-//   });
-// }
-// updateActiveButton();
-// window.addEventListener('scroll', updateActiveButton);
-
-
-
-// Ініціалізація при завантаженні
 
 
 
@@ -137,7 +119,7 @@ updateActiveButton();
 // Функція для створення розмітки пункту меню
 function createPizzaItem(pizza) {
   return `
-    <li class="pizza_item">
+    <li class="pizza_item item-title">
     <div class="trans">
       <div class="pizza_item-main">
         <div class="pizza_item-left">
@@ -189,11 +171,11 @@ function createPizzaItem(pizza) {
 
 function createDrinksItem(drinks) {
   return `
-    <li class="pizza_item">
+    <li class="pizza_item item-title">
       <div class="pizza_item-main">
         <div class="pizza_item-left">
           <div>
-            <h2 class="pizza_item-title">${drinks.title}</h2>
+            <h2 class="pizza_item-title ">${drinks.title}</h2>
             <p class="pizza_item-desk">${drinks.size}</p>
           </div>
           <p class="pizza_item-price"><span class="pizza_item-price-num">${drinks.price}</span></p>
@@ -206,7 +188,7 @@ function createDrinksItem(drinks) {
   `;
 }
 
-// ${index === 0 ? 'active-size' : ''}
+
 // Генерація списку
 pizza.forEach((pizzaItem) => {
   pizzaList.innerHTML += createPizzaItem(pizzaItem);
@@ -239,4 +221,20 @@ pizzaList.addEventListener('click', (event) => {
     details.classList.remove('is-visible');
     mainContent.classList.add('hide');
   }
+});
+const  items = document.querySelectorAll(".item-title");
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+  items.forEach(item => {
+  
+    const text = item.textContent.toLowerCase();
+    if (text.includes(query)) {
+      item.style.display = ''; 
+    
+    } else {
+      item.style.display = 'none'; 
+    }
+
+  });
 });

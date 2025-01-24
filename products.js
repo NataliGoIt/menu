@@ -177,7 +177,7 @@ export const pizza = [
   //   },
   //   {
   //     id: 2,
-  //     title: "",
+  //     title: "Hot Dog",
   //     description: "",
   //     price: 12,
   //   },

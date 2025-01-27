@@ -1,5 +1,4 @@
-import { pizza, drinks } from './products.js'; 
-import {pizzaUa} from './productsUa.js'
+import { pizza, pizzaUa, pizzaEng, drinks } from './products.js'; 
 const languageBtn = document.querySelector(".language_btn"),
  languageDropdown = document.querySelector(".language_dropdown"),
  openModalBtn = document.querySelector('.modal-window_open'),
@@ -11,7 +10,10 @@ const languageBtn = document.querySelector(".language_btn"),
  backdropDelivery = document.querySelector('.modal_delivery'),
  closeDeliveryBtn = document.querySelector('.modal_delivery-window_close'),
  searchInput = document.getElementById("search-input"),
- pizzaList = document.getElementById('pizzaList'),
+ pizzaList = document.querySelector('.pizza_list'),
+ pizzaListRo = document.getElementById('pizzaListRo'),
+ pizzaListUa = document.getElementById('pizzaListUa'),
+ pizzaListEng = document.getElementById('pizzaListEng'),
  drinksList = document.getElementById('drinksList');
   
 //  ///////////////////// contacts modal window //////////////////////////////////////////////////////////
@@ -189,11 +191,21 @@ function createDrinksItem(drinks) {
   `;
 }
 
-
+if(pizzaListRo){
+  pizza.forEach((pizzaItem) => {
+    pizzaListRo.innerHTML += createPizzaItem(pizzaItem);
+  });
+} else if(pizzaListEng){
+  pizzaEng.forEach((pizzaItem) => {
+    pizzaListEng.innerHTML += createPizzaItem(pizzaItem);
+  });
+}else if(pizzaListUa){
+  pizzaUa.forEach((pizzaItem) => {
+    pizzaListUa.innerHTML += createPizzaItem(pizzaItem);
+  });
+}
 // Генерація списку
-pizza.forEach((pizzaItem) => {
-  pizzaList.innerHTML += createPizzaItem(pizzaItem);
-});
+
 drinks.forEach((drinksItem) => {
   drinksList.innerHTML += createDrinksItem(drinksItem);
 });

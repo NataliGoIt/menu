@@ -138,7 +138,14 @@ a {
     .language_dropdown-active {
       display: block;
     }
-    
+    .et{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    /* .delivery_btn{
+      margin-left: 0 auto;
+    } */
     .flag-icon {
       width: 16px;
       height: 16px;

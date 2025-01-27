@@ -1,8 +1,7 @@
 import { pizza, drinks } from './products.js'; 
-
+import {pizzaUa} from './productsUa.js'
 const languageBtn = document.querySelector(".language_btn"),
  languageDropdown = document.querySelector(".language_dropdown"),
- selector = document.querySelector('.language_selector'),
  openModalBtn = document.querySelector('.modal-window_open'),
  closeModalBtn = document.querySelector('.modal-window_close'),
  backdrop = document.querySelector('.backdrop'),
@@ -11,28 +10,26 @@ const languageBtn = document.querySelector(".language_btn"),
  openModalDelivery = document.querySelector('.delivery_btn'),
  backdropDelivery = document.querySelector('.modal_delivery'),
  closeDeliveryBtn = document.querySelector('.modal_delivery-window_close'),
- pizzaItems = document.querySelectorAll('.pizza_item'),
- burgerList = document.getElementById("burgerList"),
-
- searchInput = document.getElementById("search-input");
-console.log(pizza)
-console.log(drinks)
-const pizzaList = document.getElementById('pizzaList');
-const drinksList = document.getElementById('drinksList')
+ searchInput = document.getElementById("search-input"),
+ pizzaList = document.getElementById('pizzaList'),
+ drinksList = document.getElementById('drinksList');
   
+//  ///////////////////// contacts modal window //////////////////////////////////////////////////////////
     openModalBtn.addEventListener('click', toggleModal);
     closeModalBtn.addEventListener('click', toggleModal);
     backdrop.addEventListener('click',(event) => (!modal.contains(event.target) && toggleModal()));
-   
-    openModalDelivery.addEventListener('click', toggleModalDelivery());
-    closeDeliveryBtn.addEventListener('click', toggleModalDelivery());
+    function toggleModal() {
+      backdrop.classList.toggle('is-hidden');
+    }
+//  /////////////////// delivery modal window /////////////////////////////////////////////////////////
+    openModalDelivery.addEventListener('click', toggleModalDelivery);
+    closeDeliveryBtn.addEventListener('click', toggleModalDelivery);
     backdropDelivery.addEventListener('click',(event) => (!modalDelivery.contains(event.target) && toggleModalDelivery()))
-  function toggleModal() {
-    backdrop.classList.toggle('is-hidden');
-  }
+ 
   function toggleModalDelivery(){
     backdropDelivery.classList.toggle("modal-open")
   }
+//  ////////////////// language modal window///////////////////////////////////////////////////////////
 // document.addEventListener("DOMContentLoaded", () => {
   languageBtn.addEventListener('click', (e)=>{
     toggleModalLang()
@@ -43,20 +40,23 @@ const drinksList = document.getElementById('drinksList')
   function toggleModalLang(){
     languageDropdown.classList.toggle("language_dropdown-active")
   }
-  document.addEventListener("click", (e) => {
-if (languageDropdown.classList.contains("language_dropdown-active")) {
-      if (e.target.tagName === "LI") {
-        const selectedLang = e.target.dataset.lang;
-        const selectedFlag = e.target.dataset.flag;
-        const selectedText = e.target.textContent;
-        console.log(selectedLang);
-        languageBtn.innerHTML = `
-          <img src="${selectedFlag}" alt="${selectedText}" class="flag-icon" />
-        `;
-      }
-    }
-    // toggleModalLang()
-  });
+// let selectedLang;
+//   document.addEventListener("click", (e) => {
+// if (languageDropdown.classList.contains("language_dropdown-active")) {
+//       if (e.target.tagName === "LI") {
+//         const selectedLang = e.target.dataset.lang;
+//         const selectedFlag = e.target.dataset.flag;
+//         const selectedText = e.target.textContent;
+//         console.log(selectedLang);
+//         languageBtn.innerHTML = `
+//           <img src="${selectedFlag}" alt="${selectedText}" class="flag-icon" />
+//         `;
+//         return selectedFlag;
+//       }
+//     }
+    
+//   });
+//   console.log(selectedLang)
 
   // });
   
@@ -65,8 +65,8 @@ if (languageDropdown.classList.contains("language_dropdown-active")) {
 
 
 
-// Функція для перевірки видимої секції
-// Отримуємо кнопки та секції
+
+// /////////////////////////////////////////   menu /////////////////////////////////////////////////////
 const buttons = {
   pizza: document.getElementById('pizza-btn'),
   burger: document.getElementById('burger-btn'),
@@ -109,13 +109,9 @@ window.addEventListener('scroll', updateActiveButton);
 // Ініціалізація
 updateActiveButton();
 
-
-
-
-
-
-
-
+// if(selectedLang === "ua"){
+//   createPizzaItem(pizzaUa)
+// }
 // Функція для створення розмітки пункту меню
 function createPizzaItem(pizza) {
   return `
@@ -128,7 +124,9 @@ function createPizzaItem(pizza) {
             <p class="pizza_item-desk">${pizza.sizes[0].grams} - ${pizza.sizes[2].grams}</p>
           </div>
           <p class="pizza_item-price"><span class="pizza_item-price-num">${pizza.sizes[0].price} - ${pizza.sizes[2].price}</span></p>
-        </div>
+       
+          </div>
+
         <div class="pizza_item-right">
           <img src="${pizza.image}" alt="${pizza.title}" class="pizza_item-img">
         </div>
@@ -141,6 +139,7 @@ function createPizzaItem(pizza) {
           <div>
             <h2 class="item_details-desk-title">${pizza.title}</h2>
             <p class="item_details-desk-desk">${pizza.description}</p>
+            
             <ul class="item_details-size-list">
               ${pizza.sizes
                 .map(
@@ -160,9 +159,11 @@ function createPizzaItem(pizza) {
                 )
                 .join('')}
             </ul>
-          </div>
+            </div>
+         
           
         </div>
+        
       </div>
       </div>
     </li>
@@ -222,6 +223,8 @@ pizzaList.addEventListener('click', (event) => {
     mainContent.classList.add('hide');
   }
 });
+
+// ///////////////////////////////////////////////// search ////////////////////////////////////////////
 const  items = document.querySelectorAll(".item-title");
 
 searchInput.addEventListener('input', () => {

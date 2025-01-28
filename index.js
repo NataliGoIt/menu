@@ -131,6 +131,7 @@ function createPizzaItem(pizza) {
 
         <div class="pizza_item-right">
           <img src="${pizza.image}" alt="${pizza.title}" class="pizza_item-img">
+          <div class="gradient"></div>
         </div>
       </div>
       <div class="item_details is-visible">

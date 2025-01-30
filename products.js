@@ -10,7 +10,7 @@ export const pizza = [
         { size: "40cm", grams:"1440gr", price: "65 lei", title: "L" }
       ],
       price: 19.99,
-      image: "/img/pizzah.jpg",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 2,

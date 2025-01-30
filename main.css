@@ -442,10 +442,15 @@ margin-bottom: 8px;
     overflow: auto;
    
   }
+  .modal-window_close-block{
+    display: flex;
+    justify-content: end;
+  }
   .modal-window_close{
-    /* display: flex;  */
-    text-align: end;
+    width: 16px;
+    height: 16px;
     cursor: pointer;
+    
   }
   .is-hidden {
     opacity: 0;
@@ -480,8 +485,14 @@ margin-bottom: 8px;
     visibility: hidden;
     pointer-events: none;
   }
+  .modal_delivery-window_close-block{
+  display: flex;
+  justify-content: end;
+  }
   .modal_delivery-window_close{
-    text-align: end;
+   
+    width: 16px;
+    height: 16px;
     cursor: pointer;
   }
   /* ===============================================map====================================== */

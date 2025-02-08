@@ -38,8 +38,10 @@
             <p class="hero_desk">Меню</p>
         </div>
         <div class="hero_search container">
-            <input type="text" id="search-input" placeholder="Пошук...">
-       
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Пошук...">
+                <button id="clearSearch" class="hidden">&times;</button>
+            </div>
         <ul class="hero_list">
             <li class="hero_item">
             <button class="hero_item-btn modal-window_open">
@@ -59,7 +61,7 @@
     <section class="menu">
     <!-- список пунктів меню -->
         <ul class="menu_list">
-            <li class="menu_item"><a href="#pizza" class="menu_item-btn menu_item-active" id="pizza-btn">Піца</a></li>
+            <li class="menu_item"><a href="#pizza" class="menu_item-btn" id="pizza-btn">Піца</a></li>
             <li class="menu_item"><a href="#burger" class="menu_item-btn" id="burger-btn">Бургер</a></li>
             <li class="menu_item"><a href="#drinks" class="menu_item-btn" id="drinks-btn">Напої</a></li>
         </ul>

@@ -207,7 +207,13 @@ a {
     font-size: 28px;
   }
   /* ===================search-input========================================================= */
+  .search-container{
+    position: relative;
+    display: inline-block;
+  }
   #search-input{
+   
+    
     padding-left: 8px;
     width: 260px;
     height: 38px;
@@ -216,6 +222,23 @@ a {
     margin-right: 5px;
 
   }
+  #clearSearch{
+    position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  /* display: none; */
+
+}
+
+#clearSearch.hidden {
+  display: none;
+}
+  
   .hero_search{
     display: flex;
     align-items: center;

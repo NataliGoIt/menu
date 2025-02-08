@@ -247,16 +247,31 @@ searchInput.addEventListener('input', () => {
   items.forEach(item => {
     const title = item.querySelector(".pizza_item-title")?.textContent.toLowerCase() || "";
     const description = item.querySelector(".item_details-desk-desk")?.textContent.toLowerCase() || "";
-console.log(item);
-console.log(title);
-console.log(description);
+
     if (title.includes(query) || description.includes(query)) {
       item.style.display = ""; // Показати елемент, якщо знайдено в назві або описі
     } else {
       item.style.display = "none"; // Сховати, якщо не знайдено
     }
   });
+ 
 });
+const clearButton = document.querySelector("#clearSearch");
+
+searchInput.addEventListener("input", () => {
+  if (searchInput.value.trim() !== "") {
+    clearButton.classList.remove("hidden");
+  } else {
+    clearButton.classList.add("hidden");
+  }
+});
+
+clearButton.addEventListener("click", () => {
+  searchInput.value = "";
+  searchInput.dispatchEvent(new Event("input")); // Оновлюємо список
+});
+
+// searchInput.dispatchEvent(new Event("input"));
   // items.forEach(item => {
   
   //   const text = item.textContent.toLowerCase();

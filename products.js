@@ -314,7 +314,7 @@ export const pizza = [
     title: "Coca-cola",
     size: "0.51",
     price: "9 lei",
-    image: "#",
+    image: "./img/cocacola.png",
   },
   {
     id: 2,

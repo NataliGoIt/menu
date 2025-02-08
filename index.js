@@ -185,7 +185,7 @@ function createDrinksItem(drinks) {
           <p class="pizza_item-price"><span class="pizza_item-price-num">${drinks.price}</span></p>
         </div>
         <div class="pizza_item-right">
-          <img src="${drinks.image}" alt="${drinks.title}" class="pizza_item-img">
+          <img src="${drinks.image}" alt="${drinks.title}" class="drinks-img">
         </div>
       </div>
     </li>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
      <ul class="header_list">
         <li class="header_item language_selector">
             <button class="header_item-btn language_btn">
-              <img src="./img/ua.svg" alt="Romania" class="flag-icon" />
+              <img src="./img/ua.svg" alt="Українська" class="flag-icon" />
             </button>
             <ul class="language_dropdown">
               <li data-lang="ua" data-flag="./img/ua.svg" class="language_dropdown-item"><a href="./indexUa.html">Українська</a></li>
@@ -29,24 +29,29 @@
             </ul>
           </li>
         <li class="header_item"><button class="header_item-btn"><a href="https://maps.app.goo.gl/a9sqprzc5kmLLca7A">
-           <img src="./img/maps.svg" alt="" class="header_item-btn-ikon"></a></button></li>
+           <img src="./img/maps.svg" alt="" class="header_item-btn-ikon">
+        </a></button></li>
      </ul>
     </header>
     <div class="hero"> 
         <div class="hero_container">
-            <!-- <img src="./img/logo.svg" class="hero_img">
-            <h1 class="hero_title">Lunch-time</h1> -->
             <p class="hero_desk">Меню</p>
         </div>
         <div class="hero_search container">
-            <input type="text" id="search-input" placeholder="Пошук">
+            <input type="text" id="search-input" placeholder="Пошук...">
        
         <ul class="hero_list">
             <li class="hero_item">
             <button class="hero_item-btn modal-window_open">
-            <img src="./img/phone.svg" alt="" class="hero_item-btn-ikon"></button></li>
+              <svg  class="hero_item-btn-ikon ikon">
+                <use xlink:href="./img/sprite.svg#phone"></use>
+              </svg>
+        </button></li>
             <li class="hero_item"><button class="hero_item-btn delivery_btn">
-            <img src="./img/delivery.svg" alt=""></button></li>
+            <svg  class="hero_item-btn-ikon ikon">
+                <use xlink:href="./img/sprite.svg#delivery"></use>
+              </svg>
+        </button></li>
          </ul>
         </div>
     </div> 
@@ -55,7 +60,7 @@
     <!-- список пунктів меню -->
         <ul class="menu_list">
             <li class="menu_item"><a href="#pizza" class="menu_item-btn menu_item-active" id="pizza-btn">Піца</a></li>
-            <li class="menu_item"><a href="#burger" class="menu_item-btn" id="burger-btn">Більше</a></li>
+            <li class="menu_item"><a href="#burger" class="menu_item-btn" id="burger-btn">Бургур</a></li>
             <li class="menu_item"><a href="#drinks" class="menu_item-btn" id="drinks-btn">Напої</a></li>
         </ul>
     <!-- список меню пица -->
@@ -73,7 +78,7 @@
     </section>
 <section class="container">
     <div>
-        <h2>Контакти </h2>
+        <h2>Контакти</h2>
 <h3>Адреса:</h3>
 <p>Cluj-napoka</p>
 <a href="https://maps.app.goo.gl/a9sqprzc5kmLLca7A">Str. Meteor, Cluj-Napoca 400347, Румунія</a>
@@ -98,14 +103,30 @@
     <footer><p>Lunch-time ©2024</p></footer>
     <div class="backdrop is-hidden">
     <div class="modal-window">
-        <div class="modal-window_close">X</div>
+        <div class="modal-window_close-block"><svg  class="modal-window_close ikon">
+            <use xlink:href="./img/sprite.svg#close"></use>
+          </svg></div>
         <div class="modal-window_container">
           <ul>
-            <li><a href="tel:+40771559725">+40771559725</li>
-            <li><a href={https://wa.me/+40771559725} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://www.threads.net/@lunch_time_cluj" target="_blank" rel="noopener noreferrer">Threads</a></li>
-            <li><a href="https://maps.app.goo.gl/a9sqprzc5kmLLca7A">Str. Meteor, Cluj-Napoca 400347, Румыния</a></li>
+            <li><a href="tel:+40771559725">
+                <svg  class="hero_item-btn-ikon ikon">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg>+40771559725</li>
+            <li><a href={https://wa.me/+40771559725} target="_blank" rel="noopener noreferrer">
+                <svg  class="hero_item-btn-ikon ikon">
+                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                  </svg>WhatsApp</a></li>
+            <li><a href="https://www.threads.net/@lunch_time_cluj" target="_blank" rel="noopener noreferrer">
+                <svg  class="hero_item-btn-ikon ikon">
+                    <use xlink:href="./img/sprite.svg#threads"></use>
+                  </svg>Threads</a></li>
+            <li><a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
+                <svg  class="hero_item-btn-ikon ikon">
+                    <use xlink:href="./img/sprite.svg#instagram"></use>
+                  </svg>Instagram</a></li>
+            <li><a href="https://maps.app.goo.gl/a9sqprzc5kmLLca7A">
+                <img src="./img/maps.svg" alt="" class="header_item-btn-ikon">
+               Str. Meteor, Cluj-Napoca 400347, Румунія</a></li>
         </ul>
         </div>
     </div>
@@ -113,11 +134,16 @@
 </div>
 <div class="modal_delivery modal-open">
     <div class="modal_delivery-window">
-        <div class="modal_delivery-window_close">X</div>
+        <div class="modal_delivery-window_close-block">
+            <svg  class="modal_delivery-window_close ikon">
+            <use xlink:href="./img/sprite.svg#close"></use>
+          </svg></div>
         <div class="modal_delivery-window_container">
           <ul class="modal_delivery-list">
-            <li class="modal_delivery-item"><a href="https://food.bolt.eu/en-US/297-cluj-napoca/p/118084-lunch-time/?utm_source=google_integration" target="_blank" rel="noopener noreferrer" class="modal_delivery-link">Bolt</li>
-            <li class="modal_delivery-item"><a href="https://glovoapp.com/ro/ro/cluj-napoca/lunch-time-clj-1/?content=meniu-c.2661446257&section=pizza-standard-o-32cm-s.5645912575" target="_blank" rel="noopener noreferrer" class="modal_delivery-link">Glovo</a></li>
+            <li class="modal_delivery-item"><a href="https://food.bolt.eu/en-US/297-cluj-napoca/p/118084-lunch-time/?utm_source=google_integration" target="_blank" rel="noopener noreferrer" class="modal_delivery-link">
+                <img src="./img/bolt.png" width="120px" alt=""></li>
+            <li class="modal_delivery-item"><a href="https://glovoapp.com/ro/ro/cluj-napoca/lunch-time-clj-1/?content=meniu-c.2661446257&section=pizza-standard-o-32cm-s.5645912575" target="_blank" rel="noopener noreferrer" class="modal_delivery-link">
+                <img src="./img/glovo.svg" alt="" width="120"></a></li>
             </ul>
         </div>
     </div>

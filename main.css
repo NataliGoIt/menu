@@ -1,6 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
+:root{
+  --color-title: #ffffff;
+  --color-price: #ffffff;
+  --color-description: #ffffff;
+
+   
+}
 h1,
 h2,
 h3,
@@ -328,6 +335,9 @@ gap: 10px;
     width: 168px;
     height: 103px;
     
+  }
+  .drinks-img{
+    height: 103px;
   }
   .gradient{
     width: 100%;

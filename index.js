@@ -175,7 +175,7 @@ function createPizzaItem(pizza) {
 
 function createDrinksItem(drinks) {
   return `
-    <li class="pizza_item item-title">
+    <li class="drinks_item item-title">
       <div class="pizza_item-main">
         <div class="pizza_item-left">
           <div>
@@ -238,19 +238,34 @@ pizzaList.addEventListener('click', (event) => {
 });
 
 // ///////////////////////////////////////////////// search ////////////////////////////////////////////
-const  items = document.querySelectorAll(".item-title");
+const items = document.querySelectorAll(".pizza_item");
+// desc = document.querySelectorAll(".item_details-desk-desk");
 
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
-  items.forEach(item => {
-  
-    const text = item.textContent.toLowerCase();
-    if (text.includes(query)) {
-      item.style.display = ''; 
-    
-    } else {
-      item.style.display = 'none'; 
-    }
 
+  items.forEach(item => {
+    const title = item.querySelector(".pizza_item-title")?.textContent.toLowerCase() || "";
+    const description = item.querySelector(".item_details-desk-desk")?.textContent.toLowerCase() || "";
+console.log(item);
+console.log(title);
+console.log(description);
+    if (title.includes(query) || description.includes(query)) {
+      item.style.display = ""; // Показати елемент, якщо знайдено в назві або описі
+    } else {
+      item.style.display = "none"; // Сховати, якщо не знайдено
+    }
   });
 });
+  // items.forEach(item => {
+  
+  //   const text = item.textContent.toLowerCase();
+  //   if (text.includes(query)) {
+  //     item.style.display = ''; 
+    
+  //   } else {
+  //     item.style.display = 'none'; 
+  //   }
+
+  // });
+// });

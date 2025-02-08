@@ -21,7 +21,7 @@ export const pizza = [
         { size: "32cm", grams:"860gr", price: "40 lei", title: "M" },
         { size: "40cm", grams:"1270gr", price: "55 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ export const pizza = [
         { size: "32cm", grams:"890gr", price: "45 lei", title: "M" },
         { size: "40cm", grams:"1220gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ export const pizza = [
         { size: "32cm", grams:"1020gr", price: "43 lei", title: "M" },
         { size: "40cm", grams:"1310gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ export const pizza = [
         { size: "32cm", grams:"1020gr", price: "45 lei", title: "M" },
         { size: "40cm", grams:"1340gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 6,
@@ -65,7 +65,7 @@ export const pizza = [
         { size: "32cm", grams:"1080gr", price: "45 lei", title: "M" },
         { size: "40cm", grams:"1390gr", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 7,
@@ -76,7 +76,7 @@ export const pizza = [
         { size: "32cm", grams:"860gr", price: "45 lei", title: "M" },
         { size: "40cm", grams:"1260gr", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 8,
@@ -87,7 +87,7 @@ export const pizza = [
         { size: "32cm", grams:"980gr", price: "43 lei", title: "M" },
         { size: "40cm", grams:"1450gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 9,
@@ -98,7 +98,7 @@ export const pizza = [
         { size: "32cm", grams:"1040gr", price: "50 lei", title: "M" },
         { size: "40cm", grams:"1610gr", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     // Додай інші продукти за потреби
   ];
@@ -113,7 +113,7 @@ export const pizza = [
         { size: "40cm", grams: "1440gr", price: "65 lei", title: "L" }
       ],
       price: 19.99,
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 2,
@@ -124,7 +124,7 @@ export const pizza = [
         { size: "32cm", grams: "860gr", price: "40 lei", title: "M" },
         { size: "40cm", grams: "1270gr", price: "55 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 3,
@@ -135,7 +135,7 @@ export const pizza = [
         { size: "32cm", grams: "890gr", price: "45 lei", title: "M" },
         { size: "40cm", grams: "1220gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 4,
@@ -146,7 +146,7 @@ export const pizza = [
         { size: "32cm", grams: "1020gr", price: "43 lei", title: "M" },
         { size: "40cm", grams: "1310gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 5,
@@ -157,7 +157,7 @@ export const pizza = [
         { size: "32cm", grams: "1020gr", price: "45 lei", title: "M" },
         { size: "40cm", grams: "1340gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 6,
@@ -168,7 +168,7 @@ export const pizza = [
         { size: "32cm", grams: "1080gr", price: "45 lei", title: "M" },
         { size: "40cm", grams: "1390gr", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 7,
@@ -179,7 +179,7 @@ export const pizza = [
         { size: "32cm", grams: "860gr", price: "45 lei", title: "M" },
         { size: "40cm", grams: "1260gr", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 8,
@@ -190,7 +190,7 @@ export const pizza = [
         { size: "32cm", grams: "980gr", price: "43 lei", title: "M" },
         { size: "40cm", grams: "1450gr", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 9,
@@ -201,7 +201,7 @@ export const pizza = [
         { size: "32cm", grams: "1040gr", price: "50 lei", title: "M" },
         { size: "40cm", grams: "1610gr", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
   ];
   export const pizzaUa = [
@@ -215,7 +215,7 @@ export const pizza = [
         { size: "40см", grams:"1440гр", price: "65 lei", title: "L" }
       ],
       price: 19.99,
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 2,
@@ -226,7 +226,7 @@ export const pizza = [
         { size: "32см", grams:"860гр", price: "40 lei", title: "M" },
         { size: "40см", grams:"1270гр", price: "55 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 3,
@@ -237,7 +237,7 @@ export const pizza = [
         { size: "32см", grams:"890гр", price: "45 lei", title: "M" },
         { size: "40см", grams:"1220гр", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 4,
@@ -248,7 +248,7 @@ export const pizza = [
         { size: "32см", grams:"1020гр", price: "43 lei", title: "M" },
         { size: "40см", grams:"1310гр", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 5,
@@ -259,7 +259,7 @@ export const pizza = [
         { size: "32см", grams:"1020гр", price: "45 lei", title: "M" },
         { size: "40см", grams:"1340гр", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 6,
@@ -270,7 +270,7 @@ export const pizza = [
         { size: "32см", grams:"1080гр", price: "45 lei", title: "M" },
         { size: "40см", grams:"1390гр", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 7,
@@ -281,7 +281,7 @@ export const pizza = [
         { size: "32см", grams:"860гр", price: "45 lei", title: "M" },
         { size: "40см", grams:"1260гр", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 8,
@@ -292,7 +292,7 @@ export const pizza = [
         { size: "32см", grams:"980гр", price: "43 lei", title: "M" },
         { size: "40см", grams:"1450гр", price: "60 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     {
       id: 9,
@@ -303,7 +303,7 @@ export const pizza = [
         { size: "32см", grams:"1040гр", price: "50 lei", title: "M" },
         { size: "40см", grams:"1610гр", price: "65 lei", title: "L" }
       ],
-      image: "https://th.bing.com/th/id/R.66acbd1dd5b8de9cb44f24a790621c6a?rik=ShYP1mb0ht2IPg&pid=ImgRaw&r=0",
+      image: "./img/pizzah.jpg",
     },
     
   ];
@@ -321,28 +321,28 @@ export const pizza = [
     title: "Coca-cola",
     size: "0,331",
     price: "7 lei",
-    image: "#",
+    image: "./img/cocacolasmall.png",
   },
   {
     id: 3,
     title: "Coca-cola zero zahar",
     size: "0,331",
     price: "7 lei",
-    image: "#",
+    image: "./img/cocacolazero.png",
   },
   {
     id: 4,
     title: "Fanta la doza",
     size: "0,331",
     price: "7 lei",
-    image: "#",
+    image: "./img/fanta.png",
   },
   {
     id: 5,
     title: "Fanta madness",
     size: "0,331",
     price: "7 lei",
-    image: "#",
+    image: "./img/fantamadness.png",
   },
   {
     id: 6,
@@ -363,14 +363,14 @@ export const pizza = [
     title: "Borsec apa plata",
     size: "0,51",
     price: "5 lei",
-    image: "#",
+    image: "./img/borsecplata.png",
   },
   {
     id: 9,
     title: "Borsec apa minerala",
     size: "0,51",
     price: "5 lei",
-    image: "#",
+    image: "./img/borsec.png",
   },
   ];
   // export const otherProducts = [

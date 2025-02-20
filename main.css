@@ -432,11 +432,14 @@ gap: 10px;
     height: 100%;
   }
   .item_details-desk-title{
-    font-size: 17px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 24px;
+    letter-spacing: 0.03em;
     font-weight: bold;
 margin-bottom: 8px;
   }
   .item_details-desk-desk{
+    font-family: "Roboto", serif;
     font-size: 14px;
     margin-bottom: 12px;
     color: #f8ebdb91;

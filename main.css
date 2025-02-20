@@ -321,16 +321,13 @@ gap: 10px;
   .pizza_item{
     
     overflow: hidden;
-    box-shadow: 0px 0px 10px var(--color-border);
+    
 
     /* border: 1px solid var(--color-border); */
     border-radius: 8px;
    
   }
-  /* .trans{
-  will-change: transform;
-    transition: height 0.5s cubic-bezier(0.25, 1, 0.32, 1), opacity 0.25s ease-out;
-  } */
+
 .pizza_item-main{
   position: relative;
   padding-left: 8px;
@@ -406,7 +403,8 @@ gap: 10px;
   }
   .item_details:not(.is-visible) {
     display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    
 
   }
   
@@ -414,6 +412,8 @@ gap: 10px;
     display: none;
     background-color: var(--color-dark);
     border-radius: 8px;
+    
+    box-shadow: 0px 0px 6px #9B3A18;
     /* transition: all 0.2s cubic-bezier(0.25, 1, 0.32, 1); */
     /* background-color: #221818; */
     overflow: hidden;
@@ -442,7 +442,7 @@ margin-bottom: 8px;
   .item_details-desk-desk{
     font-size: 14px;
     margin-bottom: 12px;
-    color: #221818;
+    color: #f8ebdb91;
     font-weight: 300;
   }
   .item_details-size-block{

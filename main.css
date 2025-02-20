@@ -322,7 +322,7 @@ gap: 10px;
     
     overflow: hidden;
     
-
+    box-shadow: 0px 0px 6px #9B3A18;
     /* border: 1px solid var(--color-border); */
     border-radius: 8px;
    
@@ -396,13 +396,14 @@ gap: 10px;
     display: none;
   }
 
- 
+
   .item_details.is-visible {
     display: none;
  
   }
   .item_details:not(.is-visible) {
     display: block;
+    /* box-shadow: 0px 0px 6px #9B3A18; */
     /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     
 
@@ -412,12 +413,8 @@ gap: 10px;
     display: none;
     background-color: var(--color-dark);
     border-radius: 8px;
-    
     box-shadow: 0px 0px 6px #9B3A18;
-    /* transition: all 0.2s cubic-bezier(0.25, 1, 0.32, 1); */
-    /* background-color: #221818; */
     overflow: hidden;
-    /* will-change: transform; */
   }
   .item_details-desk{
     padding: 12px;

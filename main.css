@@ -85,9 +85,9 @@ a {
   z-index: 0;
 }
 
-  @media screen and (min-width: 390px){
+  @media screen and (min-width: 360px){
     .container{
-      width: 360px;
+      width: 330px;
       margin: 0 auto;
       padding-left: 0;
     padding-right: 0;

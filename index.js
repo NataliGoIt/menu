@@ -155,7 +155,9 @@ function createPizzaItem(pizza) {
                   
                 </li>
                 <p class="item_details-desk-price">${size.size}</p>
+                
                 <p class="item_details-desk-price">${size.grams}</p>
+                
                 <p class="item_details-desk-price">${size.price}</p>
                 </div>
               `
@@ -176,7 +178,7 @@ function createPizzaItem(pizza) {
 function createDrinksItem(drinks) {
   return `
     <li class="drinks_item item-title">
-      <div class="pizza_item-main">
+      // <div class="pizza_item-main">
         <div class="pizza_item-left">
           <div>
             <h2 class="pizza_item-title ">${drinks.title}</h2>
@@ -187,7 +189,7 @@ function createDrinksItem(drinks) {
         <div class="pizza_item-right">
           <img src="${drinks.image}" alt="${drinks.title}" class="drinks-img">
         </div>
-      </div>
+      // </div>
     </li>
   `;
 }
